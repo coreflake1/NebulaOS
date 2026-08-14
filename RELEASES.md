@@ -5,14 +5,23 @@ as part of the 2026-08-14 repository canonicalization mission, ahead of the
 first actual release. No version number is assigned here; inventing one
 would misrepresent release history that doesn't exist yet.
 
-## What's ready to become the first release
+## Golden baseline vs. current canonical source
 
-`NebulaOS-firmware`'s `main` branch currently sits at the tag
-[`nebulaos-canonical-baseline-2026-08-14-prtouch-qualified`](https://github.com/coreflake1/NebulaOS-firmware/releases/tag/nebulaos-canonical-baseline-2026-08-14-prtouch-qualified)
-(commit `63dec1f...`, descended from `7328ef9`), which is live-qualified on
-real hardware. When a first version is officially assigned, its release
-manifest (see `releases/RELEASE_TEMPLATE.md`) should reference that
-baseline's exact component identities.
+These are two different things, and release wording should never blur them:
+
+- **`nebulaos-canonical-baseline-2026-08-14-prtouch-qualified`** (`NebulaOS-firmware` commit
+  `7328ef9`) is the **physically qualified golden baseline** — this is what's actually running on
+  the reference printer, live-verified on real hardware.
+- **Current canonical source** (`NebulaOS-firmware` `main`, commit `63dec1f...` at time of writing)
+  descends from that baseline and additionally contains repository-canonicalization work plus a real
+  GuppyScreen config/theme fix (`b15ad7f`, read-only-rootfs config loading) that was **not** part of
+  what was physically qualified. That delta is undergoing clean-build/reproducibility verification —
+  see `NebulaOS-firmware`'s own build log for the current status — and has not yet been re-verified
+  on real hardware.
+
+When a first version is officially assigned, its release manifest (see `releases/RELEASE_TEMPLATE.md`)
+should state plainly which of these two states it was actually built from and whether it was
+physically qualified on hardware, not just clean-build-verified.
 
 ## Release manifest schema
 

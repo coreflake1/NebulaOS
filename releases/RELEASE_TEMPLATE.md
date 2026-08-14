@@ -27,7 +27,7 @@ omitting a field, so a reader can tell "not recorded" apart from "empty."
 | Field | Value |
 |---|---|
 | rootfs image SHA256 | |
-| xImage (kernel image) SHA256 | |
+| uImage (kernel image) SHA256 | |
 | build-manifest.txt identity | |
 | kernel.config identity | |
 

@@ -34,7 +34,7 @@ Every release gets one file under `releases/`, named `vX.Y.Z.md`, following
 - `NebulaOS-klipper` commit/tag
 - `NebulaOS-guppyscreen` commit/tag
 - rootfs image SHA256
-- uImage (kernel image) SHA256
+- xImage (kernel image) SHA256
 - build-manifest identity (from `NebulaOS-firmware`'s own `build-manifest.txt`)
 - kernel.config identity
 - build timestamp

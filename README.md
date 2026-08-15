@@ -25,6 +25,27 @@ official version is cut. Each release documents the exact component
 revisions it was built from (see `releases/RELEASE_TEMPLATE.md`) so a build
 is always fully reproducible from the four repos above.
 
+No official release has been cut here yet — the procedures that exist and are actually exercised
+today are the developer/advanced-testing ones in `NebulaOS-firmware` (see below). Nothing in this
+repo or that one is a supported consumer installer.
+
+## Developer documentation
+
+This repo doesn't host its own copy of install/build/recovery procedures — `NebulaOS-firmware` is
+the canonical source for those, and this repo links back to it rather than duplicating:
+
+- [`NebulaOS-firmware` wiki](https://github.com/coreflake1/NebulaOS-firmware/wiki) — navigation entry point
+- [Build From Source](https://github.com/coreflake1/NebulaOS-firmware/blob/main/docs/BUILD_FROM_SOURCE.md)
+- [A/B Slot Model](https://github.com/coreflake1/NebulaOS-firmware/blob/main/docs/A_B_SLOT_MODEL.md)
+- [Developer Install From Stock](https://github.com/coreflake1/NebulaOS-firmware/blob/main/docs/DEVELOPER_INSTALL_FROM_STOCK.md)
+- [Developer Update](https://github.com/coreflake1/NebulaOS-firmware/blob/main/docs/DEVELOPER_UPDATE.md)
+- [Developer Recovery](https://github.com/coreflake1/NebulaOS-firmware/blob/main/docs/DEVELOPER_RECOVERY.md)
+- [Build Provenance](https://github.com/coreflake1/NebulaOS-firmware/blob/main/docs/BUILD_PROVENANCE.md) — how a given release artifact's origin can be verified
+
+These are developer / advanced testing documentation: they expose raw firmware images, partitions,
+A/B boot slots, and SSH/root access, and document the current development workflow rather than a
+supported consumer installer.
+
 ## Dependency model
 
 ```
